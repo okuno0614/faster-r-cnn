@@ -5,8 +5,9 @@ import seaborn as sns
 from PIL import Image
 import torch
 import albumentations as A
-from albumentations.pytorch import ToTensorV2
+from albumentations.pytorch import ToTensor
 import random
+from sklearn.metrics import confusion_matrix
 
 def plot_image(image, title=None, figsize=(10, 10)):
     """画像を表示する"""
