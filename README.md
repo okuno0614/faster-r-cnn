@@ -2,6 +2,24 @@
 
 このプロジェクトは、Faster R-CNNを使用して航空衛星画像から空き地を検出するモデルを実装したものです。
 
+## プロジェクト構成
+
+```
+faster-r-cnn/
+├── src/
+│   ├── model.py      # Faster R-CNNモデルの実装
+│   ├── dataset.py    # データセットの準備と前処理
+│   └── train.py      # 学習と評価のスクリプト
+├── data/
+│   ├── images/       # 航空衛星画像
+│   └── annotations/  # COCO形式のアノテーションファイル
+│       ├── train.json
+│       └── val.json
+├── checkpoints/      # 学習済みモデルの保存先
+├── requirements.txt  # 依存関係
+└── README.md        # プロジェクトの説明
+```
+
 ## 必要条件
 
 - Python 3.7以上
@@ -13,8 +31,8 @@
 
 1. リポジトリをクローン
 ```bash
-git clone [repository-url]
-cd [repository-name]
+git clone https://github.com/okuno0614/faster-r-cnn.git
+cd faster-r-cnn
 ```
 
 2. 仮想環境の作成と有効化
@@ -34,11 +52,7 @@ pip install -r requirements.txt
 1. データセットを以下の構造で配置してください：
 ```
 data/
-├── train/
-│   ├── image1.jpg
-│   ├── image2.jpg
-│   └── ...
-├── val/
+├── images/
 │   ├── image1.jpg
 │   ├── image2.jpg
 │   └── ...
